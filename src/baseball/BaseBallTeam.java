@@ -7,9 +7,9 @@ public class BaseBallTeam {
     private int lose;
     private int draw;
 
-    public BaseBallTeam() {
+    /*public BaseBallTeam() {
         // TODO 自動生成されたコンストラクター・スタブ
-    }
+    }*/
 
     // 引数ありのコンストラクタ
     public BaseBallTeam(String name, int win, int lose, int draw) {
@@ -52,15 +52,16 @@ public class BaseBallTeam {
     }
 
     // 勝率のメソッド
-    public double getRate(BaseBallTeam opponent) {
+    public double getRate() {
         // winとloseから勝率を求める
         double WinPercentage = (double)win / (win+lose); //型の変換忘れに注意
         return WinPercentage;
     }
 
     // 成績を表示するメソッド
-    public void report(double WinPercentage) {
-        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + WinPercentage + "です");
+    public void report(BaseBallTeam opponent) {
+        
+        double rate = getRate();
+        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + rate + "です");
     }
-
 }
