@@ -62,6 +62,6 @@ public class BaseBallTeam {
     public void report(BaseBallTeam opponent) {
         
         double rate = getRate();
-        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + rate + "です");
+        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + rate + "です。");
     }
 }
